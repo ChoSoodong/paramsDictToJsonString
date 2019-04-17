@@ -9,6 +9,15 @@
 
 @interface NSString (JsonString)
 
+ 
+ /**
+ 拼接请求参数json字符串方法 - 推荐使用⭐️⭐️⭐️⭐️⭐️
+ 拼接结果示例 : {"user":"111","psd":"222","yanzhengma":"333"}#
+ @param paramsDict 参数字典
+ @return 返回请求参数json字符串
+ */
++(NSString *)paramsJsonStringWithKeysAndValuesDictionary:(NSDictionary *)paramsDict;
+ 
 /**
  拼接请求参数json字符串方法
  拼接结果示例 : {"user":"111","psd":"222","yanzhengma":"333"}#
@@ -19,6 +28,5 @@
 +(NSString *)paramsJsonStringWithParamsKeysArray:(NSArray *)paramsKeysArr paramsValuesArray:(NSArray *)paramsValuesArr;
 
 
-+(NSString *)paramsJsonStringWithKeysAndValuesDictionary:(NSDictionary *)paramsDict;
 
 @end
